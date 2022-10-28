@@ -1,5 +1,4 @@
 # LaTeX-Basic-Template
-Very basic LaTeX Template
 
 This is a very simple LaTeX Template to start creating profesional documents. <br />
 The original title page has been downloaded from http://www.latextemplates.com/ <br />
