@@ -1,0 +1,99 @@
+\documentclass[a4paper]{article} %Template format we are going to use
+
+%----------------------------------------------------------
+%               PACKAGES
+%----------------------------------------------------------
+\usepackage[utf8]{inputenc} %To have no problems with Spanish characters
+\usepackage[english]{babel} %English
+\usepackage{graphicx} %To insert images
+\usepackage[table,xcdraw]{xcolor} %Colors
+\usepackage[most]{tcolorbox} %Boxes (In www.overleaf.com/latex/examples/drawing-coloured-boxes-using-tcolorbox/pvknncpjyfbp we copy the commands for the box we want and then we edit it)
+\usepackage[margin=2cm,top=2cm, includefoot]{geometry} %Margins
+\usepackage{fancyhdr} %Define page style
+\usepackage{smartdiagram} %To insert diagrams (In www.javatpoint.com/latex-smart-diagrams we copy the commands for the diagram style we want and then we edit it)
+\usepackage{listings} %To insert code (In www.overleaf.com/learn/latex/Code_listing we copy the commands for the code style we want and then we edit it)
+\usepackage{zed-csp} %Scheme insertion (In https://ctan.math.illinois.edu/macros/latex/contrib/zed-csp/zed2e.pdf we can see the different scheme styles)
+\usepackage{parskip} %Removes indention
+\usepackage[hidelinks]{hyperref} %Hyperlinks management
+\usepackage{float} %Container for things that can no be broken
+\usepackage{amsmath} %Math formulas
+
+%----------------------------------------------------------
+%               VARIABLE DEFINITION
+%----------------------------------------------------------
+\pagenumbering{arabic} %Page numbering
+\cfoot{\thepage} %Page numbering
+\pagestyle{fancy} %Page style
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}} % Defines a new command for the horizontal lines, change thickness here
+%\newcommand{\company_logo}{Images\company_logo.png} %Company logo
+\addto\captionsenglish{\renewcommand{\contentsname}{Index}} %Change TOC title from Contents to Index
+
+%----------------------------------------------------------
+%               COLOR DEFINITION
+%----------------------------------------------------------
+%Default colors:
+%black, blue, brown, cyan, darkgray, gray, green, lightgray, lime, magenta, olive, orange, pink, purple, red, teal, violet, white, yellow.
+
+%Custom colors:
+\definecolor{Example}{HTML}{69A84F}
+
+%----------------------------------------------------------
+%               DOCUMENT
+%----------------------------------------------------------
+	
+\begin{document}
+
+%----------------------------------------------------------
+%               TITLE PAGE
+%----------------------------------------------------------
+    \begin{titlepage}
+        \centering
+%-----------Heading--------------------
+        \textsc{\LARGE COMPANY}\\[1.5cm] % Name of your company
+        \includegraphics[width=0.6\textwidth]{company_logo.png}\par\vspace{1cm} %Company logo
+        \textsc{\Large Course name}\\[0.5cm] % Major heading such
+        \textsc{\large Course code}\\[0.5cm] % Minor heading such 
+%-----------Title--------------------
+        \HRule \\[0.4cm]
+        {\huge \bfseries Title}\\[0.4cm] % Title of your document
+        \HRule \\[1.5cm]
+%-----------Author--------------------
+        \begin{minipage}{0.75\textwidth}
+        \begin{flushleft} \large
+            \centering
+            First name \textsc{Last name}\\ % Your name
+        \end{flushleft}
+        \end{minipage}\\[2cm]
+%-----------Date--------------------
+        {\large \today}\\[2cm] % Date, change the \today to a set date if you want to be precise
+        \vfill % Fill the rest of the page with white space
+        
+    \clearpage
+    \end{titlepage}
+
+%----------------------------------------------------------
+%               HEAD
+%----------------------------------------------------------
+    \setlength{\headheight}{41.75pt}
+    \fancyhf
+    \fancyhead{\ }
+    \lhead{\includegraphics[width=5cm]{company_logo.png}} %Left head
+    \rhead{Title\\} %Rigth head
+    \renewcommand{\headrulewidth}{3pt} %Head line width
+
+%----------------------------------------------------------
+%               Table of Contents
+%----------------------------------------------------------
+    \tableofcontents
+    \clearpage
+
+%----------------------------------------------------------
+%               BODY
+%----------------------------------------------------------
+    \section{Example}
+    Example of text
+        \subsection{Example of subsection}
+        Hello
+
+
+\end{document}

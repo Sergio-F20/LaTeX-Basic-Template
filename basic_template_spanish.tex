@@ -1,0 +1,101 @@
+\documentclass[a4paper]{article} %Formato
+
+%----------------------------------------------------------
+%               PAQUETES
+%----------------------------------------------------------
+\usepackage[utf8]{inputenc} %Para no tener problemas con ciertos caracteres
+\usepackage[spanish]{babel} %Español
+\usepackage{graphicx} %Insertar imágenes
+\usepackage[table,xcdraw]{xcolor} %Colores
+\usepackage[most]{tcolorbox} %Cajas (En www.overleaf.com/latex/examples/drawing-coloured-boxes-using-tcolorbox/pvknncpjyfbp copiamos los comandos de la caja que queremos y luego lo editamos)
+\usepackage[margin=2cm,top=2cm, includefoot]{geometry} %Márgenes
+\usepackage{fancyhdr} %Definir estilo de página
+\usepackage{smartdiagram} %Para insertar diagrams (En www.javatpoint.com/latex-smart-diagrams copiamos los comandos del estilo de diagrama que queremos y luego lo editamos)
+\usepackage{listings} %Para insertarcode (En www.overleaf.com/learn/latex/Code_listing copiamos los comandos del estilo de código que queremos y luego lo editamos)
+\usepackage{zed-csp} %Para inserta esquemas (En https://ctan.math.illinois.edu/macros/latex/contrib/zed-csp/zed2e.pdf podemos ver los distintos estilos de esquema)
+\usepackage{parskip} %Elimina la sangría
+\usepackage[hidelinks]{hyperref} %Gestión de hipervínculos
+\usepackage{float}
+\usepackage{amsmath} %Formulas matemáticas
+
+%----------------------------------------------------------
+%               DEFINICIÓN DE VARIABLES
+%----------------------------------------------------------
+\pagenumbering{arabic} %Numeración página
+\cfoot{\thepage} %Numeración página
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}} % Defines a new command for the horizontal lines, change thickness here
+%\newcommand{\company_logo}{Images\company_logo.png} %Company logo
+
+%----------------------------------------------------------
+%               DEFINICIÓN DE COLORES
+%----------------------------------------------------------
+%Colores predeterminados:
+%black, blue, brown, cyan, darkgray, gray, green, lightgray, lime, magenta, olive, orange, pink, purple, red, teal, violet, white, yellow.
+
+%Colores personalizados:
+\definecolor{Ejemplo}{HTML}{69A84F}
+
+%----------------------------------------------------------
+%               DOCUMENTO
+%----------------------------------------------------------
+\begin{document}
+
+%----------------------------------------------------------
+%               PORTADA
+%----------------------------------------------------------
+    \begin{titlepage}
+        \centering
+%-----------Cabecera--------------------
+        \textsc{\LARGE COMPAÑÍA}\\[1.5cm] % Nombre de tu compañia
+        \includegraphics[width=0.6\textwidth]{company_logo.png}\par\vspace{1cm} %Logo de tu compañia
+        \textsc{\Large Texto}\\[0.5cm] %Texto mayor
+        \textsc{\large Texto}\\[0.5cm] %Texto menor 
+%-----------Titulo--------------------
+        \HRule \\[0.4cm]
+        {\huge \bfseries Título}\\[0.4cm] %Titulo de tu documento
+        \HRule \\[1.5cm]
+%-----------Autor--------------------
+        \begin{minipage}{0.75\textwidth}
+        \begin{flushleft} \large
+            \centering
+            Nombre \textsc{Apellidos}\\ %Tu nombre
+        \end{flushleft}
+        \end{minipage}\\[2cm]
+%-----------Fecha--------------------
+        {\large \today}\\[2cm] %Fecha, cambia \today para establecer una fecha precisa
+        \vfill %Rellena el resto de la página con espacio en blanco
+        
+    \clearpage
+    \end{titlepage}
+
+%----------------------------------------------------------
+%               CABEZERA
+%----------------------------------------------------------
+    \setlength{\headheight}{41.75pt}
+	
+    \pagestyle{fancy}
+    \fancyhf
+    \fancyhead{\ }
+    \lhead{\includegraphics[width=5cm]{company_logo.png}} %%Parte izquierda encabezado
+    \rhead{Título\\} %Parte derecha encabezado
+    \renewcommand{\headrulewidth}{3pt} %Grosor línea encabezado
+
+%----------------------------------------------------------
+%               Tabla de Contenidos
+%----------------------------------------------------------
+    %Si no aparece el índice en español descomentamos el siguiente comando:
+    %\addto\captionsspanish{\renewcommand{\contentsname}{Índice}}
+    \tableofcontents
+    \clearpage
+
+%----------------------------------------------------------
+%               CUERPO
+%----------------------------------------------------------
+    \section{Ejemplo}
+    Ejemplo de texto
+        \subsection{Ejemplo de subsección}
+        Hola
+
+
+
+\end{document}
